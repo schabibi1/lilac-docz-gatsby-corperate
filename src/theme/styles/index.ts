@@ -1,14 +1,14 @@
 export const styles = {
   h1: {
     margin: '0 0 30px',
-    fontFamily: 'Zilla Slab',
+    fontFamily: 'Varela Round, Sawarabi Gothic',
     fontSize: 52,
     fontWeight: 600,
     letterSpacing: '-0.03em',
   },
   h2: {
     margin: '30px 0 20px',
-    fontFamily: 'Zilla Slab',
+    fontFamily: 'Varela Round, Sawarabi Gothic',
     fontSize: 36,
     fontWeight: 400,
     letterSpacing: '-0.03em',

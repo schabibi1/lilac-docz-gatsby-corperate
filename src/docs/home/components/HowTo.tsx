@@ -115,6 +115,7 @@ const Price = styled.h3`
 
 const Link = styled(BaseLink)`
   ${btnStyle};
+  background-image: linear-gradient(to right,#8f69b6 0%, #add8e6 50%, #8f69b6 100%);
 `
 
 // const mdxExample = `---

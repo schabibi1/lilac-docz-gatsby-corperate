@@ -30,18 +30,19 @@ const scales = {
 }
 
 const kind = (outline: boolean) => (bg: string, color: string) => {
-  const boxShadowColor = outline ? bg : 'transparent'
+  // const boxShadowColor = outline ? bg : 'transparent'
   const backgroundColor = outline ? 'transparent' : bg
 
   return `
     background: ${backgroundColor};
-    box-shadow: inset 0 0 0 1px ${boxShadowColor};
+    background-size: 200% auto;
+    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
     color: ${outline ? bg : color};
     transition: all .3s;
 
     &:hover {
-      box-shadow: inset 0 0 0 1000px ${boxShadowColor};
       color: ${color};
+      background-position: right center;
     }
 
     &:visited {

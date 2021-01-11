@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import * as colors from '@styles/colors'
 import { Link } from 'docz'
 
@@ -32,9 +32,19 @@ const ListItems = styled.div`
     })}
 `
 
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`
+
 const FeatureItem = styled.div`
   display: flex;
   align-items: center;
+  animation: 1s ${fadeIn} ease-in;
 
   ${p =>
     p.theme.mq({

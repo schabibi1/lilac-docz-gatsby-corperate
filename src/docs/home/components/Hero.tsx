@@ -1,19 +1,30 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
-import styled from 'styled-components'
 //import GitHubButton from 'react-github-button'
 import { Link as BaseLink } from 'docz'
 
+import styled, { keyframes } from 'styled-components'
 import { Container, Logo } from '@components/ui'
 import { btnStyle } from '@components/ui/Button'
+
 import pattern from '@images/pattern.png'
 import image from '@images/Humaaans-3Characters.png'
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`
 
 const Wrapper = styled.div`
   width: 100%;
   background: url(${pattern});
   background-position: center;
   border-bottom: 1px solid ${p => p.theme.colors.grayLight};
+  animation: 1s ${fadeIn} ease-out;
 
   ${Container} {
     display: flex;
@@ -73,6 +84,7 @@ const Buttons = styled.div`
 
 const Link = styled(BaseLink)`
   ${btnStyle};
+  background-image: linear-gradient(to right,#8f69b6 0%, #add8e6 50%, #8f69b6 100%);
 `
 
 export const Hero = () => {
@@ -94,7 +106,7 @@ export const Hero = () => {
         /> */}
         <HeroWrapper>
           <HeroLeft>
-            <Logo 
+            <Logo
               height={130}
               style={{ maxWidth: '100%', padding: '0 10px' }} />
             <Subtitle>Lilac(ライレック)は、オーダーメイド感覚プログラミング学習をコンセプトにした、プログラミング学習サービスです。</Subtitle>

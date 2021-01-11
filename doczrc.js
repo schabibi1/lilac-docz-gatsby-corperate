@@ -21,7 +21,7 @@ export default {
     {
       name: 'はじめに',
       menu: [
-        'Introduction',
+        'コンセプト',
         'スタート',
         'Writing MDX',
         'Built-in components',
